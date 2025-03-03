@@ -1,6 +1,6 @@
 import styled from "styled-components"
-// import Navbar from "./components/Navbar"
-// import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
 // import Portfolio from "./components/Portfolio"
 // import WorkExperience from "./components/WorkExperience"
 import Footer from "./components/Footer"
@@ -51,9 +51,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        {/* <Navbar />
+        <Navbar />
         <Hero />
-        <Portfolio />
+        {/* <Portfolio />
         <WorkExperience /> */}
         <Footer />
       </Container>
