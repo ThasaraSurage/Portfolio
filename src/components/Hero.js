@@ -52,6 +52,12 @@ const Title = styled.h1`
   line-height: 1.2;
   margin-bottom: 1rem;
   max-width: 800px;
+  white-space: nowrap;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    font-size: ${(props) => props.theme.fontSizes.fontxxl};
+    white-space: normal;
+  }
 `
 
 const ColoredText = styled.span`
@@ -70,33 +76,31 @@ const ImageContainer = styled.div`
 
 const SemiCircle = styled.div`
   width: 500px;
-  height: 250px;
+  height: 400px;
   background-color: #FFB74D;
-  border-radius: 250px 250px 0 0;
+  border-radius: 300px 300px 0 0;
   position: absolute;
   bottom: 0;
   z-index: 1;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    width: 300px;
-    height: 150px;
-    border-radius: 150px 150px 0 0;
+    width: 400px;
+    height: 200px;
+    border-radius: 200px 200px 0 0;
   }
 `
 
-const ProfileImage = styled.div`
-  width: 300px;
-  height: 375px;
-  background-image: url("/Thasara_Surage.png");
-  background-size: cover;
-  background-position: center top;
+const ProfileImage = styled.img`
+  width: auto;
+  height: 450px;
   position: relative;
   z-index: 2;
-  margin-bottom: -5px;
+  object-fit: contain;
+  object-position: center bottom;
+  margin-bottom: 0;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    width: 200px;
-    height: 250px;
+    height: 350px;
   }
 `
 
@@ -129,12 +133,11 @@ const Hero = () => {
       <HeroContent>
         <HiTag>Hello!</HiTag>
         <Title>
-          I'm <ColoredText>Thasara</ColoredText>,<br />
-          Computer Science Undergraduate
+          I'm <ColoredText>Thasara</ColoredText>,<br/> Computer Science Undergraduate
         </Title>
         <ImageContainer>
           <SemiCircle />
-          <ProfileImage />
+          <ProfileImage src="/Thasara_Surage.png" alt="Thasara" />
         </ImageContainer>
       </HeroContent>
     </HeroSection>
