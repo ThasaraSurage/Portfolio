@@ -1,4 +1,24 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
 
 const HeroSection = styled.section`
   display: flex;
@@ -32,6 +52,8 @@ const HiTag = styled.div`
   position: relative;
   border: 1px solid #eee;
   font-weight: 500;
+  opacity: 0;
+  animation: ${fadeInUp} 0.8s ease-out forwards;
   
   &::after {
     content: '';
@@ -53,6 +75,9 @@ const Title = styled.h1`
   margin-bottom: 1rem;
   max-width: 800px;
   white-space: nowrap;
+  opacity: 0;
+  animation: ${fadeInUp} 0.8s ease-out forwards;
+  animation-delay: 0.3s;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: ${(props) => props.theme.fontSizes.fontxxl};
@@ -72,11 +97,14 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: flex-end;
   margin-top: 1rem;
+  opacity: 0;
+  animation: ${fadeIn} 1s ease-out forwards;
+  animation-delay: 0.6s;
 `
 
 const SemiCircle = styled.div`
   width: 500px;
-  height: 400px;
+  height: 350px;
   background-color: #FFB74D;
   border-radius: 300px 300px 0 0;
   position: absolute;
@@ -110,18 +138,22 @@ const Decoration = styled.div`
   height: 40px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFB74D'%3E%3Cpath d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'/%3E%3C/svg%3E");
   background-size: contain;
-  opacity: 0.5;
+  opacity: 0;
   
   &.top-left {
     top: 10%;
     left: 15%;
     transform: rotate(-15deg);
+    animation: ${fadeIn} 0.8s ease-out forwards;
+    animation-delay: 1s;
   }
   
   &.bottom-right {
     bottom: 30%;
     right: 15%;
     transform: rotate(15deg);
+    animation: ${fadeIn} 0.8s ease-out forwards;
+    animation-delay: 1.2s;
   }
 `
 
@@ -133,7 +165,7 @@ const Hero = () => {
       <HeroContent>
         <HiTag>Hello!</HiTag>
         <Title>
-          I'm <ColoredText>Thasara</ColoredText>,<br/> Computer Science Undergraduate
+          I'm <ColoredText>Thasara</ColoredText>, <br/>Computer Science Undergraduate
         </Title>
         <ImageContainer>
           <SemiCircle />
