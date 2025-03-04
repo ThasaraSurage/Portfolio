@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Instagram, Linkedin } from "lucide-react"
 
 const FooterSection = styled.footer`
   background-color: #1E1E1E;
@@ -13,18 +14,14 @@ const FooterSection = styled.footer`
 const FooterTitle = styled.h2`
   font-size: ${(props) => props.theme.fontSizes.fontxxl};
   font-weight: bold;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   text-align: center;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    font-size: ${(props) => props.theme.fontSizes.fontxl};
-    margin-bottom: 2rem;
-  }
+  color: white;
 `
 
 const FooterContent = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -38,26 +35,31 @@ const FooterContent = styled.div`
 const LogoSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 `
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   font-weight: bold;
   font-size: ${(props) => props.theme.fontSizes.fontlg};
 `
 
 const LogoCircle = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   background-color: ${(props) => props.theme.colors.primary};
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
 `
 
 const LogoDescription = styled.p`
-  color: ${(props) => `rgba(255, 255, 255, 0.7)`};
+  color: rgba(255, 255, 255, 0.7);
   font-size: ${(props) => props.theme.fontSizes.fontsm};
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -69,34 +71,41 @@ const SocialIcons = styled.div`
 `
 
 const SocialIcon = styled.a`
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  color: white;
   
   &:hover {
     background-color: ${(props) => props.theme.colors.primary};
+    transform: translateY(-2px);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
   }
 `
 
-const LinksSection = styled.div`
+const Column = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
 `
 
-const LinkTitle = styled.h3`
+const ColumnTitle = styled.h3`
   font-size: ${(props) => props.theme.fontSizes.fontmd};
-  margin-bottom: 1rem;
   color: ${(props) => props.theme.colors.primary};
+  margin-bottom: 1rem;
 `
 
-const LinksList = styled.ul`
+const NavList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
@@ -105,13 +114,12 @@ const LinksList = styled.ul`
   gap: 0.75rem;
 `
 
-const LinkItem = styled.li`
-  font-size: ${(props) => props.theme.fontSizes.fontsm};
-  
+const NavItem = styled.li`
   a {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: ${(props) => props.theme.fontSizes.fontsm};
     
     &:hover {
       color: white;
@@ -119,24 +127,21 @@ const LinkItem = styled.li`
   }
 `
 
-const ContactSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`
-
 const ContactItem = styled.div`
   display: flex;
+  align-items: center;
   gap: 0.5rem;
-  align-items: flex-start;
-  font-size: ${(props) => props.theme.fontSizes.fontsm};
   color: rgba(255, 255, 255, 0.7);
+  font-size: ${(props) => props.theme.fontSizes.fontsm};
+`
+
+const Divider = styled.hr`
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 3rem 0 2rem;
 `
 
 const Copyright = styled.div`
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   color: rgba(255, 255, 255, 0.5);
@@ -157,73 +162,63 @@ const Footer = () => {
       <FooterContent>
         <LogoSection>
           <Logo>
-            <LogoCircle />
-            THASARA
+            <LogoCircle>TS</LogoCircle>
+            Thasara Surage
           </Logo>
           <LogoDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue vel libero eget tincidunt. Aenean vitae
-            magna in ipsum tincidunt efficitur.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
           </LogoDescription>
           <SocialIcons>
-            <SocialIcon href="#" aria-label="Facebook">
-              f
+            <SocialIcon href="https://www.instagram.com/thasara_danidi/" aria-label="Instagram">
+              <Instagram />
             </SocialIcon>
-            <SocialIcon href="#" aria-label="Twitter">
-              t
-            </SocialIcon>
-            <SocialIcon href="#" aria-label="Instagram">
-              i
-            </SocialIcon>
-            <SocialIcon href="#" aria-label="LinkedIn">
-              in
-            </SocialIcon>
-            <SocialIcon href="#" aria-label="GitHub">
-              g
+            <SocialIcon href="https://www.linkedin.com/in/thasara-surage-8b7369293" aria-label="LinkedIn">
+              <Linkedin />
             </SocialIcon>
           </SocialIcons>
         </LogoSection>
 
-        <LinksSection>
-          <LinkTitle>Navigation</LinkTitle>
-          <LinksList>
-            <LinkItem>
+        <Column>
+          <ColumnTitle>Navigation</ColumnTitle>
+          <NavList>
+            <NavItem>
               <a href="#home">Home</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#about">About</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#services">Services</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#blog">Blog</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#contact">Contact</a>
-            </LinkItem>
-          </LinksList>
-        </LinksSection>
+            </NavItem>
+            <NavItem>
+              <a href="#about">About Us</a>
+            </NavItem>
+            <NavItem>
+              <a href="#service">Service</a>
+            </NavItem>
+            <NavItem>
+              <a href="#resume">Resume</a>
+            </NavItem>
+            <NavItem>
+              <a href="#project">Project</a>
+            </NavItem>
+          </NavList>
+        </Column>
 
-        <ContactSection>
-          <LinkTitle>Contact</LinkTitle>
-          <ContactItem>
-            <span>📧</span>
-            <span>sthasara26@gmail.com</span>
-          </ContactItem>
-          <ContactItem>
-            <span>📱</span>
-            <span>+94 772428588</span>
-          </ContactItem>
-        </ContactSection>
+        <Column>
+          <ColumnTitle>Contact</ColumnTitle>
+          <NavList>
+            <NavItem>+94 772428588</NavItem>
+            <NavItem>sthasara26@gmail.com</NavItem>
+            <NavItem>Portfolio-jcrea.com</NavItem>
+          </NavList>
+        </Column>
       </FooterContent>
 
+      <Divider />
+
       <Copyright>
-        <div>Copyright © 2023 Thasara. All Rights Reserved.</div>
-        <div>User Terms & Conditions • Privacy Policy</div>
+        <div>Copyright© 2023 Jayesh. All Rights Reserved.</div>
+        <div>User Terms & Conditions | Privacy Policy</div>
       </Copyright>
     </FooterSection>
   )
 }
 
-export default Footer;
+export default Footer
 
