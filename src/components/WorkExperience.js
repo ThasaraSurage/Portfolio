@@ -100,7 +100,7 @@ const WorkExperience = () => {
   return (
     <WorkSection>
       <Title>
-        My <ColoredText>Work Experience</ColoredText>
+        My <ColoredText>Projects</ColoredText>
       </Title>
 
       <ProjectsContainer>

@@ -98,16 +98,15 @@ const Portfolio = () => {
   return (
     <PortfolioSection>
       <Title>
-        Lets have a look at
-        <br />
-        my <ColoredText>Portfolio</ColoredText>
+        More about
+        my <ColoredText>self</ColoredText>
       </Title>
       <Description>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue vel libero eget tincidunt. Aenean vitae
         magna in ipsum tincidunt efficitur. Proin sed enim vel nulla facilisis tempor. Vestibulum ante ipsum primis in
         faucibus orci luctus et ultrices posuere cubilia.
       </Description>
-      <Button>Portfolio →</Button>
+      <Button>Resume →</Button>
 
       <SkillsContainer>
         <SkillTag>UX Design</SkillTag>
