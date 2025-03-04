@@ -207,16 +207,12 @@ const Footer = () => {
         <ContactSection>
           <LinkTitle>Contact</LinkTitle>
           <ContactItem>
-            <span>📍</span>
-            <span>123 University Street, Computer Science Building, Room 456</span>
-          </ContactItem>
-          <ContactItem>
             <span>📧</span>
-            <span>thasara@example.com</span>
+            <span>sthasara26@gmail.com</span>
           </ContactItem>
           <ContactItem>
             <span>📱</span>
-            <span>+1 (123) 456-7890</span>
+            <span>+94 772428588</span>
           </ContactItem>
         </ContactSection>
       </FooterContent>
