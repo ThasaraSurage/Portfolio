@@ -12,8 +12,10 @@ const NavContainer = styled.nav`
   padding: 0.5rem 1rem;
   width: 90%;
   margin: 1rem auto;
-  position: sticky;
+  position: fixed;
   top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
 `
 
@@ -42,9 +44,16 @@ const Navbar = () => {
 
   // Function to handle smooth scrolling
   const scrollToSection = (id) => {
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      const navHeight = 100; // Height of navbar plus desired spacing
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   }
 
@@ -67,7 +76,7 @@ const Navbar = () => {
       const contactSection = document.getElementById("contact")
 
       // Get positions of each section
-      const homeSectionTop = homeSection?.offsetTop || 0
+      // const homeSectionTop = homeSection?.offsetTop || 0
       const aboutSectionTop = aboutSection?.offsetTop || 0
       const projectSectionTop = projectSection?.offsetTop || 0
       const contactSectionTop = contactSection?.offsetTop || 0

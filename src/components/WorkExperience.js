@@ -3,13 +3,14 @@ import { ArrowRight } from "./icons/ArrowRight"
 import AnimatedSection from "./AnimatedSection"
 
 const WorkSection = styled.section`
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 4rem; // Reduced top padding
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: auto; // Changed from 100vh to auto
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem 2rem; // Reduced top padding
   }
 `
 

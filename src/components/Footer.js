@@ -7,10 +7,11 @@ import AnimatedSection from "./AnimatedSection"
 const FooterSection = styled.footer`
   background-color: #1E1E1E;
   color: white;
-  padding: 4rem 2rem 2rem;
+  padding: 8rem 2rem 2rem; // Increased top padding
+  min-height: 100vh;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    padding: 2rem 1rem 1rem;
+    padding: 6rem 1rem 1rem; // Adjusted for mobile
   }
 `
 
@@ -169,18 +170,19 @@ const Footer = () => {
         <AnimatedSection threshold={0.1}>
           <LogoSection>
             <Logo>
-              <LogoCircle>JC</LogoCircle>
-              JCREA
+              <LogoCircle>TS</LogoCircle>
+              Thasara
             </Logo>
             <LogoDescription>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+              I bring a combination of technical skills, adaptability, and teamwork in to the working environment.
+              My experience with IEEE,G17 and other leadership roles has honed my collaboration and problem-solving 
+              abilities. I am eager to learn, and I take initiative to improve my skills,as seen in my portfolio projects.
             </LogoDescription>
             <SocialIcons>
-              <SocialIcon href="#" aria-label="Instagram">
+              <SocialIcon href="https://www.instagram.com/thasara_danidi/" aria-label="Instagram">
                 <Instagram />
               </SocialIcon>
-              <SocialIcon href="#" aria-label="LinkedIn">
+              <SocialIcon href="www.linkedin.com/in/thasara-surage-8b7369293" aria-label="LinkedIn">
                 <Linkedin />
               </SocialIcon>
             </SocialIcons>
@@ -224,8 +226,8 @@ const Footer = () => {
           <Column>
             <ColumnTitle>Contact</ColumnTitle>
             <NavList>
-              <NavItem>+91 7738443636</NavItem>
-              <NavItem>Jaycrea36@gmail.com</NavItem>
+              <NavItem>+94 772428588</NavItem>
+              <NavItem>sthasara26@gmail.com</NavItem>
               <NavItem>Portfolio-jcrea.com</NavItem>
             </NavList>
           </Column>
@@ -236,7 +238,7 @@ const Footer = () => {
 
       <AnimatedSection threshold={0.1}>
         <Copyright>
-          <div>Copyright© 2023 Jayesh. All Rights Reserved.</div>
+          <div>Copyright© 2025 Thasara. All Rights Reserved.</div>
           <div>User Terms & Conditions | Privacy Policy</div>
         </Copyright>
       </AnimatedSection>

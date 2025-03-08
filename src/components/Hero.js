@@ -26,7 +26,7 @@ const HeroSection = styled.section`
   align-items: center;
   position: relative;
   overflow: hidden;
-  height: calc(100vh - 80px); // Subtract navbar height
+  height: calc(100vh-80vh); // Subtract navbar height
   padding: 0;
 `
 
@@ -103,24 +103,24 @@ const ImageContainer = styled.div`
 `
 
 const SemiCircle = styled.div`
-  width: 500px;
-  height: 350px;
+  width: 500px; // Reduced width
+  height: 250px; // Reduced height
   background-color: #FFB74D;
-  border-radius: 300px 300px 0 0;
+  border-radius: 250px 250px 0 0; // Adjusted border radius
   position: absolute;
   bottom: 0;
   z-index: 1;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    width: 400px;
-    height: 200px;
-    border-radius: 200px 200px 0 0;
+    width: 350px; // Reduced width
+    height: 175px; // Reduced height
+    border-radius: 175px 175px 0 0; // Adjusted border radius
   }
 `
 
 const ProfileImage = styled.img`
   width: auto;
-  height: 450px;
+  height: 400px; // Reduced height
   position: relative;
   z-index: 2;
   object-fit: contain;
@@ -128,7 +128,7 @@ const ProfileImage = styled.img`
   margin-bottom: 0;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    height: 350px;
+    height: 300px; // Reduced height
   }
 `
 

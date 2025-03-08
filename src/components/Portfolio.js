@@ -3,14 +3,15 @@ import styled from "styled-components"
 import AnimatedSection from "./AnimatedSection"
 
 const PortfolioSection = styled.section`
-  padding: 4rem 2rem;
+  padding: 8rem 2rem 2rem; // Reduced bottom padding
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  min-height: auto; // Changed from 100vh to auto
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    padding: 2rem 1rem;
+    padding: 6rem 1rem 1rem; // Reduced bottom padding
   }
 `
 

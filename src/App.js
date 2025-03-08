@@ -45,6 +45,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   font-family: ${(props) => props.theme.fonts.main};
+  padding-top: 80px; // Increased padding for more space below navbar
 `
 
 function App() {
