@@ -1,5 +1,6 @@
 "use client"
 import styled from "styled-components"
+import AnimatedSection from "./AnimatedSection"
 
 const PortfolioSection = styled.section`
   padding: 4rem 2rem;
@@ -103,27 +104,37 @@ const Portfolio = () => {
 
   return (
     <PortfolioSection>
-      <Title>
-        More about
-        my <ColoredText>Self</ColoredText>
-      </Title>
-      <Description>
-      I’m passionate about technology and problem-solving, which led me to explore different areas, 
+      <AnimatedSection>
+        <Title>
+          More abouy
+          my <ColoredText>Self</ColoredText>
+        </Title>
+      </AnimatedSection>
+
+      <AnimatedSection threshold={0.2}>
+        <Description>
+          I’m passionate about technology and problem-solving, which led me to explore different areas, 
       including web development, machine learning, and software engineering. 
       I have been actively involved with IEEE for the pst two years at my university, where I 
       contributed to organizing events as well as participating in competitions and hackathons.
-      </Description>
-      <Button onClick={openResume}>Resume →</Button>
+        </Description>
+      </AnimatedSection>
 
-      <SkillsContainer>
-        <SkillTag>UX Design</SkillTag>
-        <SkillTag>App Design</SkillTag>
-        <SkillTag>Dashboard</SkillTag>
-        <SkillTag>Wireframe</SkillTag>
-        <SkillTag>User Research</SkillTag>
-      </SkillsContainer>
+      <AnimatedSection threshold={0.3}>
+        <Button onClick={openResume}>Resume →</Button>
+      </AnimatedSection>
+
+      <AnimatedSection threshold={0.4}>
+        <SkillsContainer>
+          <SkillTag>UX Design</SkillTag>
+          <SkillTag>App Design</SkillTag>
+          <SkillTag>Dashboard</SkillTag>
+          <SkillTag>Wireframe</SkillTag>
+          <SkillTag>User Research</SkillTag>
+        </SkillsContainer>
+      </AnimatedSection>
     </PortfolioSection>
   )
 }
 
-export default Portfolio
+export default Portfolio;
