@@ -3,14 +3,14 @@ import { ArrowRight } from "./icons/ArrowRight"
 import AnimatedSection from "./AnimatedSection"
 
 const WorkSection = styled.section`
-  padding: 4rem 2rem 4rem; // Reduced top padding
+  padding: 4rem 2rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: auto; // Changed from 100vh to auto
+  min-height: auto;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    padding: 3rem 1rem 2rem; // Reduced top padding
+    padding: 3rem 1rem 2rem;
   }
 `
 
@@ -110,13 +110,21 @@ const WorkExperience = () => {
       <ProjectsContainer>
         <AnimatedSection threshold={0.1}>
           <ProjectCard>
-            <ProjectImage />
+          <ProjectImage 
+              style={{ 
+                backgroundImage: "url('/intX.png')", 
+                backgroundSize: "cover", 
+                backgroundPosition: "center" 
+              }} 
+          />
             <ProjectContent>
               <ProjectTitle>intX</ProjectTitle>
               <ProjectDescription>
                 AI driven Interview Preparation tool for all the job seekers
+                <br/>
+                Technologies Used - React,JS,Python
               </ProjectDescription>
-              <ViewButton>
+              <ViewButton onClick={() => window.open("https://int-x.vercel.app/", "_blank")}>
                 <ArrowRight />
               </ViewButton>
             </ProjectContent>
@@ -125,11 +133,19 @@ const WorkExperience = () => {
 
         <AnimatedSection threshold={0.1} style={{ animationDelay: "0.2s" }}>
           <ProjectCard>
-            <ProjectImage />
+          <ProjectImage 
+              style={{ 
+                backgroundImage: "url('/oop.png')", 
+                backgroundSize: "cover", 
+                backgroundPosition: "center" 
+              }} 
+          />
             <ProjectContent>
               <ProjectTitle>MyTicketHub</ProjectTitle>
               <ProjectDescription>
                 A real time ticketing platform
+                <br/>
+                Technologies Used - Angular,Springboot,Java
               </ProjectDescription>
               <ViewButton>
                 <ArrowRight />
@@ -140,13 +156,22 @@ const WorkExperience = () => {
 
         <AnimatedSection threshold={0.1} style={{ animationDelay: "0.4s" }}>
           <ProjectCard>
-            <ProjectImage />
+          <ProjectImage 
+              style={{ 
+                backgroundImage: "url('/ceylonwastenot.png')", 
+                backgroundSize: "cover", 
+                backgroundPosition: "center" 
+              }} 
+          />
             <ProjectContent>
-              <ProjectTitle>Dashboard UI</ProjectTitle>
+              <ProjectTitle>CeylonWasteNot</ProjectTitle>
               <ProjectDescription>
-                Analytics dashboard with data visualization, user management, and customizable widgets.
+                An innovative mobile application which helps waste management in Sri Lanka, that connects
+                all farmers, restaurants, and customers.
+                <br/>
+                Technologies Used - Figma
               </ProjectDescription>
-              <ViewButton>
+              <ViewButton onClick={() => window.open("https://www.figma.com/proto/4QicsMqyvpJcw3MCEthFZk/Untitled?node-id=0-1&t=LXgHXbe6WGT25BeZ-1", "_blank")}>
                 <ArrowRight />
               </ViewButton>
             </ProjectContent>

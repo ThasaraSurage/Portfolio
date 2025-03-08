@@ -50,7 +50,7 @@ const HiTag = styled.div`
   font-size: ${(props) => props.theme.fontSizes.fontsm};
   margin-bottom: 1rem;
   position: relative;
-  border: 1px solid #eee;
+  border: 1px solid #000;
   font-weight: 500;
   opacity: 0;
   animation: ${fadeInUp} 0.8s ease-out forwards;
@@ -86,7 +86,7 @@ const Title = styled.h1`
 `
 
 const ColoredText = styled.span`
-  color: #C48ADB;
+  color: #FD853A;
 `
 
 const ImageContainer = styled.div`
@@ -105,7 +105,7 @@ const ImageContainer = styled.div`
 const SemiCircle = styled.div`
   width: 500px; // Reduced width
   height: 250px; // Reduced height
-  background-color: #FFB74D;
+  background-color: #FEB273;
   border-radius: 250px 250px 0 0; // Adjusted border radius
   position: absolute;
   bottom: 0;
