@@ -175,7 +175,7 @@ const Footer = () => {
             </Logo>
             <LogoDescription>
               I bring a combination of technical skills, adaptability, and teamwork in to the working environment.
-              My experience with IEEE,G17 and other leadership roles has honed my collaboration and problem-solving 
+              My experience with IEEE, G17 and other leadership roles has honed my collaboration and problem-solving 
               abilities. I am eager to learn, and I take initiative to improve my skills,as seen in my portfolio projects.
             </LogoDescription>
             <SocialIcons>
@@ -201,11 +201,6 @@ const Footer = () => {
               <NavItem>
                 <a href="#about" onClick={(e) => scrollToSection("about", e)}>
                   About
-                </a>
-              </NavItem>
-              <NavItem>
-                <a href="#resume" onClick={(e) => scrollToSection("resume", e)}>
-                  Resume
                 </a>
               </NavItem>
               <NavItem>
