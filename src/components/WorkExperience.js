@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { ArrowRight } from "./icons/ArrowRight"
+import AnimatedSection from "./AnimatedSection"
 
 const WorkSection = styled.section`
   padding: 4rem 2rem;
@@ -98,54 +99,61 @@ const ViewButton = styled.div`
 
 const WorkExperience = () => {
   return (
-    <WorkSection>
-      <Title>
-        My <ColoredText>Projects</ColoredText>
-      </Title>
+    <WorkSection id="project">
+      <AnimatedSection>
+        <Title>
+          My <ColoredText>Projects</ColoredText>
+        </Title>
+      </AnimatedSection>
 
       <ProjectsContainer>
-        <ProjectCard>
-          <ProjectImage />
-          <ProjectContent>
-            <ProjectTitle>UX/UI Design</ProjectTitle>
-            <ProjectDescription>
-              Mobile app design for a fitness tracking application with clean interface and intuitive navigation.
-            </ProjectDescription>
-            <ViewButton>
-              <ArrowRight />
-            </ViewButton>
-          </ProjectContent>
-        </ProjectCard>
+        <AnimatedSection threshold={0.1}>
+          <ProjectCard>
+            <ProjectImage />
+            <ProjectContent>
+              <ProjectTitle>intX</ProjectTitle>
+              <ProjectDescription>
+                AI driven Interview Preparation tool for all the job seekers
+              </ProjectDescription>
+              <ViewButton>
+                <ArrowRight />
+              </ViewButton>
+            </ProjectContent>
+          </ProjectCard>
+        </AnimatedSection>
 
-        <ProjectCard>
-          <ProjectImage />
-          <ProjectContent>
-            <ProjectTitle>Web Design</ProjectTitle>
-            <ProjectDescription>
-              E-commerce website with responsive design, product filtering, and seamless checkout experience.
-            </ProjectDescription>
-            <ViewButton>
-              <ArrowRight />
-            </ViewButton>
-          </ProjectContent>
-        </ProjectCard>
+        <AnimatedSection threshold={0.1} style={{ animationDelay: "0.2s" }}>
+          <ProjectCard>
+            <ProjectImage />
+            <ProjectContent>
+              <ProjectTitle>MyTicketHub</ProjectTitle>
+              <ProjectDescription>
+                A real time ticketing platform
+              </ProjectDescription>
+              <ViewButton>
+                <ArrowRight />
+              </ViewButton>
+            </ProjectContent>
+          </ProjectCard>
+        </AnimatedSection>
 
-        <ProjectCard>
-          <ProjectImage />
-          <ProjectContent>
-            <ProjectTitle>Dashboard UI</ProjectTitle>
-            <ProjectDescription>
-              Analytics dashboard with data visualization, user management, and customizable widgets.
-            </ProjectDescription>
-            <ViewButton>
-              <ArrowRight />
-            </ViewButton>
-          </ProjectContent>
-        </ProjectCard>
+        <AnimatedSection threshold={0.1} style={{ animationDelay: "0.4s" }}>
+          <ProjectCard>
+            <ProjectImage />
+            <ProjectContent>
+              <ProjectTitle>Dashboard UI</ProjectTitle>
+              <ProjectDescription>
+                Analytics dashboard with data visualization, user management, and customizable widgets.
+              </ProjectDescription>
+              <ViewButton>
+                <ArrowRight />
+              </ViewButton>
+            </ProjectContent>
+          </ProjectCard>
+        </AnimatedSection>
       </ProjectsContainer>
     </WorkSection>
   )
 }
 
 export default WorkExperience;
-

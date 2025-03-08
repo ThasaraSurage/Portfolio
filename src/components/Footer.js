@@ -1,5 +1,8 @@
+"use client"
+
 import styled from "styled-components"
 import { Instagram, Linkedin } from "lucide-react"
+import AnimatedSection from "./AnimatedSection"
 
 const FooterSection = styled.footer`
   background-color: #1E1E1E;
@@ -127,14 +130,6 @@ const NavItem = styled.li`
   }
 `
 
-const ContactItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: ${(props) => props.theme.fontSizes.fontsm};
-`
-
 const Divider = styled.hr`
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -154,71 +149,100 @@ const Copyright = styled.div`
   }
 `
 
+// Function to handle smooth scrolling
+const scrollToSection = (id, e) => {
+  e.preventDefault()
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" })
+  }
+}
+
 const Footer = () => {
   return (
-    <FooterSection>
-      <FooterTitle>Lets Connect there</FooterTitle>
+    <FooterSection id="contact">
+      <AnimatedSection>
+        <FooterTitle>Lets Connect there</FooterTitle>
+      </AnimatedSection>
 
       <FooterContent>
-        <LogoSection>
-          <Logo>
-            <LogoCircle>TS</LogoCircle>
-            Thasara Surage
-          </Logo>
-          <LogoDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
-          </LogoDescription>
-          <SocialIcons>
-            <SocialIcon href="https://www.instagram.com/thasara_danidi/" aria-label="Instagram">
-              <Instagram />
-            </SocialIcon>
-            <SocialIcon href="https://www.linkedin.com/in/thasara-surage-8b7369293" aria-label="LinkedIn">
-              <Linkedin />
-            </SocialIcon>
-          </SocialIcons>
-        </LogoSection>
+        <AnimatedSection threshold={0.1}>
+          <LogoSection>
+            <Logo>
+              <LogoCircle>JC</LogoCircle>
+              JCREA
+            </Logo>
+            <LogoDescription>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+            </LogoDescription>
+            <SocialIcons>
+              <SocialIcon href="#" aria-label="Instagram">
+                <Instagram />
+              </SocialIcon>
+              <SocialIcon href="#" aria-label="LinkedIn">
+                <Linkedin />
+              </SocialIcon>
+            </SocialIcons>
+          </LogoSection>
+        </AnimatedSection>
 
-        <Column>
-          <ColumnTitle>Navigation</ColumnTitle>
-          <NavList>
-            <NavItem>
-              <a href="#home">Home</a>
-            </NavItem>
-            <NavItem>
-              <a href="#about">About Us</a>
-            </NavItem>
-            <NavItem>
-              <a href="#service">Service</a>
-            </NavItem>
-            <NavItem>
-              <a href="#resume">Resume</a>
-            </NavItem>
-            <NavItem>
-              <a href="#project">Project</a>
-            </NavItem>
-          </NavList>
-        </Column>
+        <AnimatedSection threshold={0.1} style={{ animationDelay: "0.2s" }}>
+          <Column>
+            <ColumnTitle>Navigation</ColumnTitle>
+            <NavList>
+              <NavItem>
+                <a href="#home" onClick={(e) => scrollToSection("home", e)}>
+                  Home
+                </a>
+              </NavItem>
+              <NavItem>
+                <a href="#about" onClick={(e) => scrollToSection("about", e)}>
+                  About
+                </a>
+              </NavItem>
+              <NavItem>
+                <a href="#resume" onClick={(e) => scrollToSection("resume", e)}>
+                  Resume
+                </a>
+              </NavItem>
+              <NavItem>
+                <a href="#project" onClick={(e) => scrollToSection("project", e)}>
+                  Project
+                </a>
+              </NavItem>
+              <NavItem>
+                <a href="#contact" onClick={(e) => scrollToSection("contact", e)}>
+                  Contact
+                </a>
+              </NavItem>
+            </NavList>
+          </Column>
+        </AnimatedSection>
 
-        <Column>
-          <ColumnTitle>Contact</ColumnTitle>
-          <NavList>
-            <NavItem>+94 772428588</NavItem>
-            <NavItem>sthasara26@gmail.com</NavItem>
-            <NavItem>Portfolio-jcrea.com</NavItem>
-          </NavList>
-        </Column>
+        <AnimatedSection threshold={0.1} style={{ animationDelay: "0.4s" }}>
+          <Column>
+            <ColumnTitle>Contact</ColumnTitle>
+            <NavList>
+              <NavItem>+91 7738443636</NavItem>
+              <NavItem>Jaycrea36@gmail.com</NavItem>
+              <NavItem>Portfolio-jcrea.com</NavItem>
+            </NavList>
+          </Column>
+        </AnimatedSection>
       </FooterContent>
 
       <Divider />
 
-      <Copyright>
-        <div>Copyright© 2023 Jayesh. All Rights Reserved.</div>
-        <div>User Terms & Conditions | Privacy Policy</div>
-      </Copyright>
+      <AnimatedSection threshold={0.1}>
+        <Copyright>
+          <div>Copyright© 2023 Jayesh. All Rights Reserved.</div>
+          <div>User Terms & Conditions | Privacy Policy</div>
+        </Copyright>
+      </AnimatedSection>
     </FooterSection>
   )
 }
 
-export default Footer
+export default Footer;
 

@@ -103,24 +103,23 @@ const Portfolio = () => {
   }
 
   return (
-    <PortfolioSection>
+    <PortfolioSection id="about">
       <AnimatedSection>
         <Title>
-          More abouy
-          my <ColoredText>Self</ColoredText>
+          More about my <ColoredText>Self</ColoredText>
         </Title>
       </AnimatedSection>
 
       <AnimatedSection threshold={0.2}>
         <Description>
-          I’m passionate about technology and problem-solving, which led me to explore different areas, 
-      including web development, machine learning, and software engineering. 
-      I have been actively involved with IEEE for the pst two years at my university, where I 
-      contributed to organizing events as well as participating in competitions and hackathons.
+          I'm passionate about technology and problem-solving, which led me to explore different areas, including web
+          development, machine learning, and software engineering. I have been actively involved with IEEE for the pst
+          two years at my university, where I contributed to organizing events as well as participating in competitions
+          and hackathons.
         </Description>
       </AnimatedSection>
 
-      <AnimatedSection threshold={0.3}>
+      <AnimatedSection threshold={0.3} id="resume">
         <Button onClick={openResume}>Resume →</Button>
       </AnimatedSection>
 
@@ -138,3 +137,4 @@ const Portfolio = () => {
 }
 
 export default Portfolio;
+

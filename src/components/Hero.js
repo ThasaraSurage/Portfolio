@@ -159,7 +159,7 @@ const Decoration = styled.div`
 
 const Hero = () => {
   return (
-    <HeroSection>
+    <HeroSection id="home">
       <Decoration className="top-left" />
       <Decoration className="bottom-right" />
       <HeroContent>
