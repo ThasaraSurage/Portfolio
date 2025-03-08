@@ -102,9 +102,8 @@ const Portfolio = () => {
         my <ColoredText>self</ColoredText>
       </Title>
       <Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue vel libero eget tincidunt. Aenean vitae
-        magna in ipsum tincidunt efficitur. Proin sed enim vel nulla facilisis tempor. Vestibulum ante ipsum primis in
-        faucibus orci luctus et ultrices posuere cubilia.
+      I’m passionate about technology and problem-solving, which led me to explore different areas, including web development, machine learning, 
+      and software engineering. I have been actively involved with IEEE for the pst two years at my university, where I contributed to organizing events as well as participating in competitions and hackathons.
       </Description>
       <Button>Resume →</Button>
 
