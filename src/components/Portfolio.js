@@ -1,3 +1,4 @@
+"use client"
 import styled from "styled-components"
 
 const PortfolioSection = styled.section`
@@ -95,17 +96,24 @@ const SkillTag = styled.div`
 `
 
 const Portfolio = () => {
+  // Function to open the resume PDF in a new tab
+  const openResume = () => {
+    window.open("/resume.pdf", "_blank")
+  }
+
   return (
     <PortfolioSection>
       <Title>
         More about
-        my <ColoredText>self</ColoredText>
+        my <ColoredText>Self</ColoredText>
       </Title>
       <Description>
-      I’m passionate about technology and problem-solving, which led me to explore different areas, including web development, machine learning, 
-      and software engineering. I have been actively involved with IEEE for the pst two years at my university, where I contributed to organizing events as well as participating in competitions and hackathons.
+      I’m passionate about technology and problem-solving, which led me to explore different areas, 
+      including web development, machine learning, and software engineering. 
+      I have been actively involved with IEEE for the pst two years at my university, where I 
+      contributed to organizing events as well as participating in competitions and hackathons.
       </Description>
-      <Button>Resume →</Button>
+      <Button onClick={openResume}>Resume →</Button>
 
       <SkillsContainer>
         <SkillTag>UX Design</SkillTag>
@@ -118,5 +126,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio;
-
+export default Portfolio
