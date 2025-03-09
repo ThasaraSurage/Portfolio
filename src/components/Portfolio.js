@@ -107,7 +107,7 @@ const Portfolio = () => {
     <PortfolioSection id="about">
       <AnimatedSection>
         <Title>
-          More about my <ColoredText>Self</ColoredText>
+          Who <ColoredText>Am I ?</ColoredText>
         </Title>
       </AnimatedSection>
 
