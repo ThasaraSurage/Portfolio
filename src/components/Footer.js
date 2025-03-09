@@ -223,7 +223,7 @@ const Footer = () => {
             <NavList>
               <NavItem>+94 772428588</NavItem>
               <NavItem>sthasara26@gmail.com</NavItem>
-              <NavItem>Portfolio-jcrea.com</NavItem>
+              <NavItem>portfolio-thasara.web.app</NavItem>
             </NavList>
           </Column>
         </AnimatedSection>
