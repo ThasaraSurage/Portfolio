@@ -50,6 +50,7 @@ const ProjectCard = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  // border: 1px solid #FD853A;
 `
 
 const ProjectImage = styled.div`
