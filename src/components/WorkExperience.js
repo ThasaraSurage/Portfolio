@@ -178,6 +178,30 @@ const WorkExperience = () => {
             </ProjectContent>
           </ProjectCard>
         </AnimatedSection>
+
+        <AnimatedSection threshold={0.1}>
+          <ProjectCard>
+          <ProjectImage 
+              style={{ 
+                backgroundImage: "url('/airplane.jpg')", 
+                backgroundSize: "cover", 
+                backgroundPosition: "center" 
+              }} 
+          />
+            <ProjectContent>
+              <ProjectTitle>Plane Management System</ProjectTitle>
+              <ProjectDescription>
+                A simple plane management system
+                <br/>
+                Technologies Used - Java
+              </ProjectDescription>
+              <ViewButton onClick={() => window.open("https://github.com/ThasaraSurage/Plane-Management-System")}>
+                <ArrowRight />
+              </ViewButton>
+            </ProjectContent>
+          </ProjectCard>
+        </AnimatedSection>
+
       </ProjectsContainer>
     </WorkSection>
   )

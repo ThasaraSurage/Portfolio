@@ -182,7 +182,7 @@ const Footer = () => {
               <SocialIcon href="https://www.instagram.com/thasara_danidi/" aria-label="Instagram">
                 <Instagram />
               </SocialIcon>
-              <SocialIcon href="www.linkedin.com/in/thasara-surage-8b7369293" aria-label="LinkedIn">
+              <SocialIcon href="https://www.linkedin.com/in/thasara-surage-8b7369293/" aria-label="LinkedIn">
                 <Linkedin />
               </SocialIcon>
             </SocialIcons>
